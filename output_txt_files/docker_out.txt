@@ -1,1 +1,27 @@
-<paste log output from Docker prediction, here>
+Successfully tagged ml-microsvc-k8:latest
+REPOSITORY                    TAG             IMAGE ID       CREATED                  SIZE
+katemamo/ml-microsvc-k8       latest          f0eba5000c6d   33 minutes ago           1.6GB
+gcr.io/k8s-minikube/kicbase   v0.0.37         01c0ce65fff7   2 weeks ago              1.15GB
+python                        3.7.3-stretch   34a518642c76   3 years ago              929MB
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 153-126-571
+[2023-02-11 18:42:35,927] INFO in app: JSON payload: 
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2023-02-11 18:42:35,938] INFO in app: Inference payload DataFrame: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2023-02-11 18:42:35,946] INFO in app: Scaling Payload: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2023-02-11 18:42:35,949] INFO in app: Scaled Payload: 
+[[0. 0. 0. 0. 0. 0.]]
+[2023-02-11 18:42:35,950] INFO in app: Model Prediction Value: 
+[20.35373177134412]
+172.17.0.1 - - [11/Feb/2023 18:42:35] "POST /predict HTTP/1.1" 200 -
